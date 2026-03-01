@@ -1,8 +1,33 @@
 
+# tmux
+echo "Copying .tmux.conf"
 mkdir ~/.tmux
 mkdir ~/.tmux/plugins
-git clone https://github.com/tmux-plugins/tmux-logging.git ~/.tmux/plugins/tmux-logging
+tmuxconf="~/.tmux.conf"
+if [[ -e "$tmuxconf" ]]; then
+  mv "$tmuxconf" "$tmuxconf.old"
+fi
+cp .tmux.conf $tmuxconf
 
-git clone https://github.com/Dewalt-arch/pimpmykalii.git ~/pimpmykali
-cd ~/pimpykali
-sudo ./pimpmykali.sh
+echo "Copying .zshrc"
+zshrc="~/.zshrc"
+if [[ -e "$zshrc" ]]; then
+  mv "$zshrc" "$zshrc.old"
+fi
+cp .zshrc $zshrc
+
+# c macro
+wget -qO- https://raw.githubusercontent.com/rettier/c/master/install.sh | bash
+
+# pimpmykali
+echo "Do you want to install pimpmykali? [y/N]"
+read -r answer
+
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+    git clone https://github.com/Dewalt-arch/pimpmykalii.git ~/pimpmykali
+    cd ~/pimpykali
+    sudo ./pimpmykali.sh
+else
+    echo "Skipping pimpmykali."
+fi
+
