@@ -1,16 +1,17 @@
+#!/bin/bash
 
 # tmux
 echo "Copying .tmux.conf"
-mkdir ~/.tmux
-mkdir ~/.tmux/plugins
-tmuxconf="~/.tmux.conf"
+mkdir -p ~/.tmux
+mkdir -p ~/.tmux/plugins
+tmuxconf="$HOME/.tmux.conf"
 if [[ -e "$tmuxconf" ]]; then
   mv "$tmuxconf" "$tmuxconf.old"
 fi
 cp .tmux.conf $tmuxconf
 
 echo "Copying .zshrc"
-zshrc="~/.zshrc"
+zshrc="$HOME/.zshrc"
 if [[ -e "$zshrc" ]]; then
   mv "$zshrc" "$zshrc.old"
 fi
