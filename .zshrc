@@ -1,6 +1,5 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
-alias droopescan='sudo docker run --rm droope/droopescan'i
 alias cserver='docker run --rm -d --name c-server -p 33333:80 -e STORAGE_BACKEND=file -e STORAGE_PATH=/tmp rettier/c-server'
 
 # Load custom environment variables
