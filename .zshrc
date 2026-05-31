@@ -268,4 +268,8 @@ fi
 # Created by `pipx` on 2025-08-30 16:52:11
 export PATH="$PATH:/home/kali/.local/bin"
 export PATH=$HOME/.local/bin:$PATH
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
 stty erase ^?
