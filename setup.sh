@@ -25,8 +25,8 @@ echo "Do you want to install pimpmykali? [y/N]"
 read -r answer
 
 if [[ "$answer" =~ ^[Yy]$ ]]; then
-    git clone https://github.com/Dewalt-arch/pimpmykalii.git ~/pimpmykali
-    cd ~/pimpykali
+    git clone https://github.com/Dewalt-arch/pimpmykali.git ~/pimpmykali
+    cd ~/pimpmykali
     sudo ./pimpmykali.sh
 else
     echo "Skipping pimpmykali."
