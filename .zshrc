@@ -268,4 +268,4 @@ fi
 # Created by `pipx` on 2025-08-30 16:52:11
 export PATH="$PATH:/home/kali/.local/bin"
 export PATH=$HOME/.local/bin:$PATH
-stty erase ^H
+stty erase ^?
